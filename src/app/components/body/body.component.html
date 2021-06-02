@@ -1,0 +1,52 @@
+<div class="card mb-3">
+  <img src="../../../assets/img/logo.png" class="rounded mx-auto d-block" height="250em" width="600em">
+</div>
+
+      <!--Formulario-->
+<div class="container">
+  <div class="row align-items-start">
+    <div class="col">
+      <div class="col-md-6">
+        <div  class="card text-white text-center bg-danger mb-3">
+          INSERTAR NOMBRES
+        </div>
+      <div class="card">
+        
+        <div class="card-body">
+          <div class="form-floating mb-3">
+            <input
+              [(ngModel)]="nuevoNombre"
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Nombre"
+            />
+            <label for="floatingInput" >Nombre</label>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+          <button class="btn btn-danger" (click)="addName()">
+            Insertar
+          </button></div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+
+    <div class="col">
+      <!--Columna Derecha-->
+    <div class="col-md-6">
+      <div class="card text-white text-center bg-danger mb-3">
+        LISTA DE NOMBRES
+      </div>
+      <ng-container *ngIf="lista.length">
+        <ul [ngClass]="estilo">
+          <li *ngFor="let item of lista">{{ item }}</li>
+        </ul>
+      </ng-container>
+    </div>
+
+    </div>
+
+  </div>
+</div>
