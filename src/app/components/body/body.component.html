@@ -1,10 +1,8 @@
-<div class="card mb-3">
-  <img src="../../../assets/img/logo.png" class="rounded mx-auto d-block" height="250em" width="600em">
-</div>
-
-      <!--Formulario-->
+<!--Formulario-->
 <div class="container">
   <div class="row align-items-start">
+    <h1 [ngClass]="estilo" class="text-center">Magdalena Flores Martínez</h1>
+    <p></p>
     <div class="col">
       <div class="col-md-6">
         <div  class="card text-white text-center bg-danger mb-3">
@@ -15,7 +13,7 @@
         <div class="card-body">
           <div class="form-floating mb-3">
             <input
-              [(ngModel)]="nuevoNombre"
+              [(ngModel)]="idNombre"
               type="text"
               class="form-control"
               id="floatingInput"
@@ -40,8 +38,8 @@
         LISTA DE NOMBRES
       </div>
       <ng-container *ngIf="lista.length">
-        <ul [ngClass]="estilo">
-          <li *ngFor="let item of lista">{{ item }}</li>
+        <ul>
+          <li class="h3" *ngFor="let item of lista">{{ item }}</li>
         </ul>
       </ng-container>
     </div>

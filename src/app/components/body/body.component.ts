@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BodyComponent implements OnInit {
 
   lista:Array<string> = []
-  nuevoNombre: string = "";
+  idNombre: string = "";
   estilo:string = "h4"
 
   constructor() { }
@@ -18,11 +18,11 @@ export class BodyComponent implements OnInit {
 
   addName(){
     if(this.lista.length > 3){
-      this.estilo = "azul h2"
+      this.estilo = "azul h1"
     }
     if(this.lista.length < 10){
-      this.lista.push(this.nuevoNombre)
-      this.nuevoNombre = ""
+      this.lista.push(this.idNombre)
+      this.idNombre = ""
       console.log(this.lista)
     }else{
       alert("LISTA LLENA")
